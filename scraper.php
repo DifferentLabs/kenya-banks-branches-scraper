@@ -12,7 +12,7 @@
 	$i = 0;
 	$ilen = count( $html->find('a') ) -1;	//counts all the links ... ignores last link (not a bank)
 	foreach($html->find('a') as $element){ //fetches alll links on the page
-       if( ++$i == $ilen ) break; // skips last url
+        // skips last url
        $link = $element->href; // gets the link
        $branches= file_get_html($root_url.$link); // fetches  page content
 
